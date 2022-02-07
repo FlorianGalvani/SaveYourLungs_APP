@@ -1,0 +1,22 @@
+@import '../../../variables';
+.header {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+    color: #fff;
+    background-color: $secondary-bg-color;
+
+    ion-icon {
+        font-size: 32px;
+    }
+    .logo {
+
+    }
+    img {
+        width: 10%;
+    }
+}

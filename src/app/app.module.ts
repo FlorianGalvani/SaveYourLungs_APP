@@ -7,11 +7,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-//Composants
-
-import { HeaderComponent } from './components/header/header.component'
-
-const declarations = [AppComponent, HeaderComponent]
+//Modules
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+const declarations = [AppComponent,HeaderComponent,FooterComponent]
 
 @NgModule({
   declarations: declarations,

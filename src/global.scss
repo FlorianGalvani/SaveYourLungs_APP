@@ -26,6 +26,9 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 @import "./variables";
+* {
+	user-select: none;
+}
 .wrapper {
     margin-right: auto; /* 1 */
     margin-left:  auto; /* 1 */

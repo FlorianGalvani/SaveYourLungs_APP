@@ -1,0 +1,10 @@
+@import '../../../variables';
+.errorPopup {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    transform: translateY(-100px);
+    width: 100%;
+    padding: 20px 10px;
+    color: $primary-text-color;
+}

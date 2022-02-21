@@ -1,0 +1,18 @@
+.NotificationsModal {
+    height: 100%;
+    .closeBtn {
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        font-size: 1.3em;
+    }
+    margin: 15% 5%;
+    h1 {
+        font-size: 2em;
+        margin-bottom: 10%;
+    }
+    .notificationsList {
+        height: 90%;
+        background-color: var(--ion-toolbar-background);
+    }
+}

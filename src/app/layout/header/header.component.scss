@@ -1,26 +1,28 @@
-@import '../../../variables';
-.header {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 5%;
-    color: #fff;
-    background-color: $secondary-bg-color;
+ion-header {
+    ion-toolbar {
+        padding: 0 2%;
+        ion-button {
 
-    ion-icon {
-        font-size: 32px;
-    }
-    .logo {
+            ion-icon {
+                font-size: 24px;
+                color: black;
+            }
+        }
+        ion-title {
+            font-size: 25px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .notificationBtn {
+            ion-badge{
+                position: absolute;
+                width: 10%;
 
-    }
-
-    .headerRight {
-        width: 30%;
+                bottom: 0;
+            }
+        }
         img {
-            width: 26%;
+            max-width: 60px;
         }
     }
 }

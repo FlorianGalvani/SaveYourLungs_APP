@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="NotificationsModal">
+    <div class="closeBtn" (click)="closeNotificationsModal()">
+      <p>close</p>
+    </div>
+    <h1>Notifications</h1>
+    <div class="notificationsList">
+      <ion-list>
+        <ion-item *ngFor="let notif of notifications; trackBy:trackItems">
+          <h3>{{notification.title}}</h3>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

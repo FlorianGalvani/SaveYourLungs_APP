@@ -6,11 +6,13 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { LayoutModule } from 'src/app/layout/layout.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    LayoutModule,
     FormsModule,
     IonicModule,
     HomePageRoutingModule,

@@ -1,4 +1,4 @@
-@import '../../../variables';
+
 #container {
   text-align: center;
 
@@ -9,7 +9,6 @@
   transform: translateY(-50%);
 }
 .main {
-  background-color: $primary-bg-color;
   height: 100%;
 }
 #container strong {

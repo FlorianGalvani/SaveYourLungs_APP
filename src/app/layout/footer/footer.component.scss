@@ -1,17 +1,17 @@
-@import '../../../variables';
-.footer {
-    bottom: 0;
-    width: 100%;
-    background-color: $secondary-bg-color;
-    color: $primary-text-color;
-    padding: 4% 0;
-    ul {
-        display: flex;
-        justify-content: space-around;
-        li {
-            ion-icon {
-                font-size: 32px;
-
+ion-footer {
+    ion-toolbar {
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                ion-icon {
+                    font-size: 32px;
+                }
+                img {
+                    background-color: black;
+                    border-radius: 100px;
+                    max-width: 32px;
+                }
             }
         }
     }

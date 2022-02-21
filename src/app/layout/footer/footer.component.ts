@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ErrorPopupService } from 'src/app/services/popup/popup.service';
+import { LayoutService } from 'src/app/services/layout/layout.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,11 +8,11 @@ import { ErrorPopupService } from 'src/app/services/popup/popup.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private router: Router, private errorPopupService:ErrorPopupService){}
+  constructor(private router: Router, private layoutService:LayoutService){}
 
   navigate(page){
     console.log(page);
-    this.errorPopupService.sendErrorPopup('error','Ceci est une erreur');
+    this.layoutService.sendErrorPopup('success','Ceci est une erreur');
     this.router.navigate([page])
   }
 

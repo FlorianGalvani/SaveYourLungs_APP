@@ -25,8 +25,11 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
 * {
+	font-family: 'Dongle'; 
+	font-weight: 400;
 	user-select: none;
 }
 .wrapper {
@@ -87,7 +90,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-.Page {
-	background-color: $primary-bg-color;
 }

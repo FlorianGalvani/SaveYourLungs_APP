@@ -1,10 +1,14 @@
-<div class="header">
-  <ion-icon name="menu-outline"></ion-icon>
-  <div class="logo">
-    SaveYourLungs
-  </div>
-    <div class="headerRight">
-      <ion-icon name="notifications-outline"></ion-icon>
-       <img src="https://robohash.org/azeertytyukcgcc" alt="">
-    </div>
-</div>
+<ion-header class="">
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-button>
+    <ion-title size="large" class="logo">
+      SaveYourLungs
+    </ion-title>
+    <ion-button  fill="clear"  (click)="openNotificationsModal()" slot="end">
+      <ion-icon name="notifications-outline">
+      </ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>

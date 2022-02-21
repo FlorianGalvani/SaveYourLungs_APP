@@ -1,0 +1,15 @@
+<div class="NotificationsModal">
+  <ion-back-button></ion-back-button>
+  <!-- <div class="closeBtn" (click)="closeNotificationsModal()">
+    <p>close</p>
+    
+  </div> -->
+  <h1>Notifications</h1>
+  <div class="notificationsList">
+    <ion-list>
+      <ion-card *ngFor="let notif of notifications; trackBy:trackItems">
+        <h3>{{notification.title}}</h3>
+      </ion-card>
+    </ion-list>
+  </div>
+</div>

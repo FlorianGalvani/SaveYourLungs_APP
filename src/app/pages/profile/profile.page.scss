@@ -1,0 +1,36 @@
+.container {
+    padding-bottom: 20px;
+    background-color: #00324b;
+    color: #fff;
+    font-family: "Dongle", sans-serif;
+    font-size: 1.5em;
+    line-height: 12px;
+    a {
+        text-decoration: none;
+        color: #747e7e;
+    }
+    .profile {
+        p {
+            margin-left: 30px;
+            padding-top: 20px;
+            font-size: 30px;
+        }
+    }
+    .image {
+        text-align: center;
+        margin-top: 5px;
+        img {
+            border-radius: 10%;
+        }
+        p.bordered {
+            padding: 15px 0 15px 0;
+            background-color: #002537;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+        }
+    }
+    .infos {
+        margin-left: 30px;
+    }
+}

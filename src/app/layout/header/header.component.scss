@@ -2,10 +2,9 @@ ion-header {
     ion-toolbar {
         padding: 0 2%;
         ion-button {
-
             ion-icon {
                 font-size: 24px;
-                color: black;
+
             }
         }
         ion-title {
@@ -13,7 +12,7 @@ ion-header {
             text-align: center;
             line-height: 20px;
         }
-        .notificationBtn {
+        .div {
             ion-badge{
                 position: absolute;
                 width: 10%;

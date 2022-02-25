@@ -28,7 +28,6 @@ export class ModalComponent implements OnInit {
         component = NotificationComponent;
         cssClass = 'notificationModal';
         break;
-
       default:
         break;
     }

@@ -8,12 +8,11 @@ import { LayoutService } from 'src/app/services/layout/layout.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private router: Router, private layoutService:LayoutService){}
+  constructor(private router: Router, private layoutService: LayoutService){}
 
   navigate(page){
-    console.log(page);
-    this.layoutService.sendErrorPopup('success','Ceci est une erreur');
-    this.router.navigate([page])
+    // this.layoutService.sendErrorPopup('success','Ceci est une erreur');
+    this.router.navigate([page]);
   }
 
   ngOnInit() {}

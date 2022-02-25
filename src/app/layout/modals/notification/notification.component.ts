@@ -1,11 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+
+
 interface Notification {
   title: string;
   content: string;
 }
 
 const notifications = [
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
+  {title: 'test',content: 'contenu'},
   {title: 'test',content: 'contenu'},
   {title: 'test',content: 'contenu'},
   {title: 'test',content: 'contenu'},

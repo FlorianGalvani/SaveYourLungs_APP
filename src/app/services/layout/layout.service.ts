@@ -11,11 +11,10 @@ export class LayoutService {
 
   constructor() { }
   sendErrorPopup(type: string, message: string) {
-    console.log(this.errorPopupMessage);
     const data = {
-      type: type,
-      message: message
-    }
+      type,
+      message
+    };
     this.errorPopupMessage.next(data);
   }
 
@@ -23,7 +22,7 @@ export class LayoutService {
     return this.errorPopupMessage.asObservable();
   }
 
-  sendOpenModalSignal(componentName:string) {
+  sendOpenModalSignal(componentName: string) {
     if (componentName) {
       this.notificationModal.next(componentName);
     }

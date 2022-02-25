@@ -1,36 +1,47 @@
-.container {
-    padding-bottom: 20px;
-    background-color: #00324b;
-    color: #fff;
-    font-family: "Dongle", sans-serif;
-    font-size: 1.5em;
-    line-height: 12px;
-    a {
-        text-decoration: none;
-        color: #747e7e;
-    }
-    .profile {
-        p {
-            margin-left: 30px;
-            padding-top: 20px;
-            font-size: 30px;
+ion-content {
+    .container {
+        padding-top: 20px;
+        font-family: "Dongle", sans-serif;
+        font-size: 1.5em;
+        line-height: 12px;
+        height: 100%;
+        ion-title {
+            text-align: center;
+            font-size: 1.5em;
+            line-height: 0.8em;
         }
-    }
-    .image {
-        text-align: center;
-        margin-top: 5px;
-        img {
-            border-radius: 10%;
-        }
-        p.bordered {
-            padding: 15px 0 15px 0;
-            background-color: #002537;
-            width: 80%;
+        .image {
+            text-align: center;
+            background-color: "#f00";
+            width: 250px;
+            height: 250px;
             margin: auto;
-            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10%;
+            .teensie {
+                transform: scale(1.8);
+            }
         }
-    }
-    .infos {
-        margin-left: 30px;
+        .infos {
+            p {
+                text-align: center;
+                margin: 4% 0;
+            }
+            p.bordered {
+                padding: 3% 0;
+                background-color: #002537;
+                width: 80%;
+                margin: auto;
+                border-radius: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: #747e7e;
+            }
+        }
     }
 }
+

@@ -1,15 +1,34 @@
-<div class="NotificationsModal">
-  <ion-back-button></ion-back-button>
-  <div class="closeBtn" (click)="closeNotificationsModal()">
-    <p>close</p>
-    
-  </div>
-  <h1>Notifications</h1>
-  <div class="notificationsList">
+
+
+  <ion-list-header lines="full">
+
+    <ion-label>Notifications</ion-label>
+
+    <div class="closeBtn" (click)="closeNotificationsModal()">
+      <ion-icon name="close">
+
+      </ion-icon>
+    </div>
+  </ion-list-header>
+
+  <ion-content>
     <ion-list>
-      <ion-card *ngFor="let notif of notifications; trackBy:trackItems">
-        <h3>{{notification.title}}</h3>
-      </ion-card>
+
+      <ion-item-sliding *ngFor="let notif of notifications">
+
+        <ion-item >
+          <ion-label>{{notif.title}}</ion-label>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option (click)="console.log('test')" color="danger"><ion-icon name="trash"></ion-icon></ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="start">
+          <ion-item-option (click)="console.log('test')" color="success"><ion-icon name="trash"></ion-icon></ion-item-option>
+        </ion-item-options>
+        
+      </ion-item-sliding>
     </ion-list>
-  </div>
-</div>
+  </ion-content>
+
+

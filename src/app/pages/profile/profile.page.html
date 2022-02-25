@@ -1,23 +1,22 @@
-
-<ion-content>
+<ion-content  [fullscreen]="true">
   <div class="container">
-    <div class="profile">
-      <p>Mon Profil</p>
+      <ion-title #profilTitle >Mon Profil</ion-title>
+    <div class="image">
+      <img *ngIf="!isPlaying" src="https://picsum.photos/250/250" alt="" (click)="handleClick()">
+      <img class="teensie" *ngIf="isPlaying" src="https://c.tenor.com/tQ5n4dRXesgAAAAC/teensie-supremacy.gif" alt="" >
     </div>
-      <div class="image">
-        <img src="https://picsum.photos/250/250" alt="">
-        <p>Nom - Prenom</p>
-        <p class="bordered">Highlighted badges</p>
-        <p class="info-link"><a href="#">Mes badges</a></p>
-      </div>
-      <div class="infos">
-        <p>Records : </p>
-        <p>Pas : </p>
-        <p class="bordered">Moyenne de cigarettes fumées par jour : </p>
-        <p>Jours sans cigarette : </p>
-        <p class="info-link"><a href="#">Changer mon mot de passe</a></p>
-        <p class="info-link"><a href="#">Changer mon adresse mail</a></p>
-      </div>
-  </div>
+
+    <div class="infos">
+      <p>{{userProfileData && userProfileData.firstname}} - {{userProfileData && userProfileData.lastname}}</p>
+      <p class="bordered">Highlighted badges</p>
+      <p class="info-link"><a href="#">Mes badges</a></p>
+      <p>Records : </p>
+      <p>Pas : </p>
+      <p class="bordered">Moyenne de cigarettes fumées par jour : </p>
+      <p>Jours sans cigarette : </p>
+      <p class="info-link"><a href="#">Changer mon mot de passe</a></p>
+      <p class="info-link"><a href="#">Changer mon adresse mail</a></p>
+    </div>
   
+  </div>
 </ion-content>

@@ -7,8 +7,8 @@ import { LayoutService } from 'src/app/services/layout/layout.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private layoutService:LayoutService) {}
-  
+  constructor(private layoutService: LayoutService) {}
+
   openNotificationsModal() {
     this.layoutService.sendOpenModalSignal('notifications');
   }

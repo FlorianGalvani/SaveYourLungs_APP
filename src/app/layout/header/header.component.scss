@@ -1,19 +1,16 @@
 ion-header {
+    ion-icon {
+        font-size: 24px;
+    }
     ion-toolbar {
-        padding: 0 2%;
-        ion-button {
-            ion-icon {
-                font-size: 24px;
-
-            }
-        }
+        padding: 0 5%;
         ion-title {
             font-size: 25px;
             text-align: center;
             line-height: 20px;
         }
         .div {
-            ion-badge{
+            ion-badge {
                 position: absolute;
                 width: 10%;
 

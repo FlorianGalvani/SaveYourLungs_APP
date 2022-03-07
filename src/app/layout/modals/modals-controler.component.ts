@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { NotificationComponent } from './notification/notification.component';
 import { LayoutService } from 'src/app/services/layout/layout.service';
 import { Subscription } from 'rxjs';
+import { SettingsComponent } from './settings/settings.component';
 @Component({
   selector: 'app-modal',
   templateUrl: './modals-controler.component.html',
@@ -27,6 +28,10 @@ export class ModalComponent implements OnInit {
       case 'notifications':
         component = NotificationComponent;
         cssClass = 'notificationModal';
+        break;
+      case 'settings':
+        component = SettingsComponent;
+        cssClass = 'settingsModal';
         break;
       default:
         break;

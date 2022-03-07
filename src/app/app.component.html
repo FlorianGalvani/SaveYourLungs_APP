@@ -1,13 +1,13 @@
 <ion-app>
-  <app-modal></app-modal>
-  <ion-header>
+  <app-modal *ngIf="isLoggedIn"></app-modal>
+  <ion-header *ngIf="isLoggedIn">
     <app-header></app-header>
   </ion-header>
   <ion-content>
-    <app-popup></app-popup>
+    <app-popup *ngIf="isLoggedIn"></app-popup>
     <ion-router-outlet></ion-router-outlet>
   </ion-content>
-  <ion-footer>
+  <ion-footer *ngIf="isLoggedIn">
     <app-footer></app-footer>
   </ion-footer>
 </ion-app>

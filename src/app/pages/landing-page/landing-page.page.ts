@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.page.scss'],
 })
 export class LandingPagePage implements OnInit {
+  @ViewChild('videoPlayer') videoplayer: any;
+  subscription;
+  
+  constructor(private platform: Platform) {
 
-  constructor() { }
-
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    console.log('hi');
+    this.subscription = this.platform.backButton.subscribeWithPriority(9999, () => {
+      // do nothing
+    });
+  }
+  ionViewDidLeave() {
+    this.subscription.unsubscribe();
+  }
 }

@@ -14,6 +14,10 @@ export class FooterComponent implements OnInit {
     // this.layoutService.sendErrorPopup('success','Ceci est une erreur');
     this.router.navigate([page]);
   }
+  
+  openNotificationsModal() {
+    this.layoutService.sendOpenModalSignal('notifications');
+  }
 
   ngOnInit() {}
 

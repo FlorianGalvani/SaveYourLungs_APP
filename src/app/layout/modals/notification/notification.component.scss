@@ -1,23 +1,20 @@
-.NotificationsModal {
-    height: 100%;
-    margin: 0 5%;
-    ion-list-header {
-        ion-label {
-            font-size: 2em;
-        }
-        .closeBtn {
-            font-size: 1.3em;
-        }
+ion-list-header {
+    display: flex;
+    justify-content: space-around;
+    ion-label {
+        font-size: 2.5em;
     }
-    ion-content {
-        padding: 2%;
-        ion-list {
-
-            ion-item {
-                ion-card {
-                    h3 {
-
-                    }
+    .closeBtn {
+        font-size: 1.3em;
+    }
+}
+ion-content {
+    ion-list {
+        width: 90%;
+        margin: auto;
+        ion-item {
+            ion-card {
+                h3 {
                 }
             }
         }

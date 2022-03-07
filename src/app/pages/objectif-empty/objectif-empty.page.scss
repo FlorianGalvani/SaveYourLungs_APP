@@ -1,0 +1,39 @@
+.main>h3{
+    font-family:dongle-regular !important;
+    font-size: 24px;
+    margin-left: 30px;
+}
+.empty_obj{
+    display: flex;
+    justify-content: center;
+}
+.box_obj{
+    width: 144px;
+    height: 88px;
+    background-color: #E1E1E1;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    font-family:dongle-regular !important;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.box_obj p{
+ font-size: 14px;
+ text-align: center;
+ margin-bottom: 0;
+}
+.btn_emptyobj {
+    
+    border-radius: 8px;
+    background-color: #7480FF;
+    height: 18px;
+    width: 101px;
+    margin-top: 10px;
+}
+.txt-exp{
+    font-family: dongle-light !important;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}

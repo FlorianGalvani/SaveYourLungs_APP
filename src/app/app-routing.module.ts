@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'stepsstats',
@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'landing-page',
     loadChildren: () => import('./pages/landing-page/landing-page.module').then(m => m.LandingPagePageModule)
   },
+  {
+    path: 'objectifs',
+    loadChildren: () => import('./pages/objectif/objectif.module').then(m  => m.ObjectifPageModule)
+  }
 ];
 
 @NgModule({

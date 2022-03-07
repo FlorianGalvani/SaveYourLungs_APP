@@ -1,34 +1,31 @@
+<ion-list-header lines="full">
 
+  <ion-label>Notifications</ion-label>
 
-  <ion-list-header lines="full">
+  <div class="closeBtn" (click)="closeNotificationsModal()">
+    <ion-icon name="close">
 
-    <ion-label>Notifications</ion-label>
+    </ion-icon>
+  </div>
+</ion-list-header>
 
-    <div class="closeBtn" (click)="closeNotificationsModal()">
-      <ion-icon name="close">
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let notif of notifications">
 
-      </ion-icon>
-    </div>
-  </ion-list-header>
-
-  <ion-content>
-    <ion-list>
-
-      <ion-item-sliding *ngFor="let notif of notifications">
-
-        <ion-item >
-          <ion-label>{{notif.title}}</ion-label>
-        </ion-item>
-
-        <ion-item-options side="end">
-          <ion-item-option (click)="console.log('test')" color="danger"><ion-icon name="trash"></ion-icon></ion-item-option>
-        </ion-item-options>
-        <ion-item-options side="start">
-          <ion-item-option (click)="console.log('test')" color="success"><ion-icon name="trash"></ion-icon></ion-item-option>
-        </ion-item-options>
-        
-      </ion-item-sliding>
-    </ion-list>
-  </ion-content>
-
-
+      <ion-item-options side="end">
+        <ion-item-option (click)="console.log('test')" color="danger">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+      <ion-item>
+        <ion-label>{{notif.title}}</ion-label>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option (click)="console.log('test')" color="success">
+          <ion-icon name="share" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

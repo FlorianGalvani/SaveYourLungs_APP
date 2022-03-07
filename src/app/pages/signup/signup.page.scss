@@ -1,4 +1,10 @@
 .container {
+    .back {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+    }
     background-color: #00324b;
     color: #fff;
     font-family: "Dongle", sans-serif;

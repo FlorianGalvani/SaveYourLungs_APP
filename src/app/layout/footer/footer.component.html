@@ -2,7 +2,16 @@
   <ion-toolbar>
     <ion-nav-link>
       <ion-icon name="home-outline" (click)="navigate('/home')"></ion-icon>
+      <ion-icon name="bar-chart" (click)="navigate('/objectifs')"></ion-icon>
+      <ion-icon name="bar-chart-outline" (click)="navigate('/home')"></ion-icon>
+      
+      <div class="notifications" (click)="openNotificationsModal()">
+        <ion-icon name="notifications-outline"  slot="end"></ion-icon>
+        <ion-badge color="danger">0</ion-badge>
+      </div>
+     
       <img (click)="navigate('/profile')" src="https://robohash.org/azeertytyukcgcc" alt="" slot="end">
+    
     </ion-nav-link>
   </ion-toolbar>
 </ion-footer>

@@ -1,11 +1,12 @@
 <ion-content>
-  <div class="container">
+  <video #backgroundVideo src="assets/video/Untitled.mp4" preload="auto" autoplay="true" loop="true" muted="true" >
+    <img src="assets/img/pexels-kampus-production-6298316.jpg" alt="">
+  </video>
+  <div class="center">
     <p>Bienvenue sur SaveYourLungs ! Pour commencer inscrit toi ou connecte toi si tu possede deja un compte</p>
-    <div class="links">
-      <a href="#">Connexion</a>
-      <a href="#">Inscription</a>
-
+    <div class="buttons">
+      <ion-button [routerLink]="['/login']">Connexion</ion-button>
+      <ion-button [routerLink]="['/signup']">Inscription</ion-button>
     </div>
-    
   </div>
 </ion-content>

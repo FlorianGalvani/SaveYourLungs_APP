@@ -1,0 +1,22 @@
+ion-list-header {
+    display: flex;
+    justify-content: space-around;
+    ion-label {
+        font-size: 2.5em;
+    }
+    .closeBtn {
+        font-size: 1.3em;
+    }
+}
+ion-content {
+    ion-list {
+        width: 90%;
+        margin: auto;
+        ion-item {
+            ion-card {
+                h3 {
+                }
+            }
+        }
+    }
+}

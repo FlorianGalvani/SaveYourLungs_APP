@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="container">
+    <ion-icon class="back"  name="arrow-back-outline" [routerLink]="['/landing-page']"></ion-icon>
+    <h2>Se Connecter</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()" >
+      <ion-item class="one-input" lines="full">
+        <ion-label position="stacked" for="email">Email : </ion-label>
+        <ion-input type="email" formControlName="email" name="email" id="email" placeholder=""></ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+        Veuillez renseigner le champs Email.
+      </span>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.minlength">
+        Name should be min 2 chars long.
+      </span>
+      
+      <ion-item class="one-input">
+        <ion-label position="stacked" for="password">Mot de passe : </ion-label>
+        <ion-input type="password" formControlName="password" name="password" id="password" placeholder=""></ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+        Veuillez renseigner le champs mot de passe.
+      </span>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+        Name should be min 2 chars long.
+      </span>
+      <ion-button type="submit" color="danger" expand="block">
+        <p *ngIf="!isLoading">Connexion</p>
+        <ion-spinner *ngIf="isLoading" name="dots"></ion-spinner>
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

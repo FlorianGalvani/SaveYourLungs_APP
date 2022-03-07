@@ -1,0 +1,61 @@
+ion-content {
+    .container {
+        padding-top: 20px;
+        font-family: "Dongle", sans-serif;
+        font-size: 1.5em;
+        line-height: 12px;
+        height: 100%;
+        ion-title {
+            text-align: center;
+            font-size: 1.5em;
+            line-height: 0.8em;
+        }
+        .image {
+            text-align: center;
+            background-color: "#f00";
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10%;
+            .teensie {
+                transform: scale(1.8);
+            }
+        }
+        .settings {
+            z-index: 999;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 32px;
+        }
+        .logout {
+            z-index: 999;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 32px;
+        }
+        .infos {
+            p {
+                text-align: center;
+                margin: 4% 0;
+            }
+            p.bordered {
+                padding: 3% 0;
+                background-color: #002537;
+                width: 80%;
+                margin: auto;
+                border-radius: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: #747e7e;
+            }
+        }
+    }
+}
+

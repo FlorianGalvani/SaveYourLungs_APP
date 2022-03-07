@@ -1,0 +1,43 @@
+.container {
+    .back {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+    }
+    h2 {
+        padding-top: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    form {
+        width: 90%;
+        margin: auto;
+        ion-item {
+            margin-bottom: 10%;
+            ion-label {
+                font-size: 1.5em;
+                padding: 2% 0;
+                margin-bottom: 5%;
+            }
+            ion-input {
+                display: block;
+                width: 90%;
+                margin-bottom: 10%;
+                .native-input {
+                    margin: auto;
+                    background-color: #fff;
+                }
+            }
+        }
+        ion-button {
+            width: 60%;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1em;
+            padding: 5px 0 5px 0;
+        }
+    }
+}

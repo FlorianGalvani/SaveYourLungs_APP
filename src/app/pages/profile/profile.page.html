@@ -1,0 +1,23 @@
+<ion-content  [fullscreen]="true">
+  <div class="container">
+      <ion-title #profilTitle >Mon Profil</ion-title>
+    <div class="image">
+      <img *ngIf="!isPlaying" src="https://picsum.photos/250/250" alt="" (click)="handleClick()">
+      <img class="teensie" *ngIf="isPlaying" src="https://c.tenor.com/tQ5n4dRXesgAAAAC/teensie-supremacy.gif" alt="" >
+    </div>
+    <ion-icon class="settings" name="settings-outline" (click)="settings()" ></ion-icon>
+    <ion-icon class="logout" name="log-out-outline" (click)="logout()"></ion-icon>
+    <div class="infos">
+      <p>{{userProfileData && userProfileData.firstname}} - {{userProfileData && userProfileData.lastname}}</p>
+      <p class="bordered">Highlighted badges</p>
+      <p class="info-link"><a href="#">Mes badges</a></p>
+      <p>Records : </p>
+      <p>Pas : </p>
+      <p class="bordered">Moyenne de cigarettes fumées par jour : </p>
+      <p>Jours sans cigarette : </p>
+      <p class="info-link"><a href="#">Changer mon mot de passe</a></p>
+      <p class="info-link"><a href="#">Changer mon adresse mail</a></p>
+    </div>
+  
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="homePage">
+    <ion-card class="stepsCount">
+      <ion-card-header>
+        <ion-card-title>Aujourd'hui vous avez effectué : </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-spinner *ngIf="!todaySteps" name="dots"></ion-spinner>
+        <p *ngIf="todaySteps">{{todaySteps}} pas</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="chart-card">
+      <ion-card-header>
+        <ion-card-title>Cette semaine vous avez effectué : 
+          <ion-spinner *ngIf="!totalWeekSteps" name="dots"></ion-spinner>
+        <p *ngIf="totalWeekSteps"> {{totalWeekSteps}} pas</p>
+         
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChart></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

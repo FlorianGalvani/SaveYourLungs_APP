@@ -3,15 +3,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+//Custom Modules
+import { LayoutModule } from './layout/layout.module';
+import { AuthModule } from './modules/auth/auth.module';
+//Components
+import { AppComponent } from './app.component';
+
+import { Health } from '@awesome-cordova-plugins/health/ngx';
+import { NativeAudio } from '@awesome-cordova-plugins/native-audio/ngx';
+import { NgChartsModule } from 'ng2-charts';
+
+import { HttpClientModule } from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage-angular';
+const declarations = [AppComponent];
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations,
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [
+    CommonModule,
+    LayoutModule,
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    AuthModule,
+    IonicStorageModule.forRoot(),
+    NgChartsModule
+  ],
+  providers: [NativeAudio,Health,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

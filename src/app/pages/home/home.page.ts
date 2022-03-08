@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 import { Health } from '@awesome-cordova-plugins/health/ngx';
 import { Storage } from '@ionic/storage-angular';
 import { Chart } from 'chart.js';
+
 interface Notification {
   title: string;
   content: string;
-
 }
 
 @Component({
@@ -14,6 +14,7 @@ interface Notification {
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage implements OnInit {
   @ViewChild('barChart') barChart;
   bars: any;
@@ -75,17 +76,17 @@ export class HomePage implements OnInit {
     }).catch(e => console.error(e));
 
     this.storage.get('ACCESS_TOKEN').then((data) => {
+
       console.log(data);
+
       if (!data) {
         this.router.navigate(['/landing-page']);
       }
+
     });
   }
   ionViewDidEnter() {
     this.createBarChart();
-    console.log('===========================================');
-    console.log(this.bars.data.datasets[0]);
-    console.log('===========================================');
     this.bars.update();
   }
   createBarChart() {

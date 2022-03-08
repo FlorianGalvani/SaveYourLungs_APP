@@ -1,44 +1,49 @@
 <ion-content>
   <div class="main">
-    <h3>Vos objectif :</h3>
     <ion-card class="vos-objectif">
-      <div class="box-objectif">
-        <h4>Vos objectif :</h4>
-        <div class="module-objectif">
-          <div class="bar-objectif">
+
+      <div class="box-objectif" >
+        <h4>Vos objectifs</h4>
+        <div class="empty" *ngIf="challenges.length === 0">
+          <p>Vous n'avez aucun challenges en cours</p>
+        </div>
+
+        <div class="module-objectif" *ngFor="let challenge of challenges">
+          <ion-item class="bar-objectif">
             <img src="" alt="">
             <div class="txt-bar">
               <p>10 000/jours</p>
             </div>
+          </ion-item>
+          <button class="btn-defobjectif">Definir Objectif</button>
+          <img class="partager" src="" alt="">
+        </div>
+        <!-- <div class="module-objectif" *ngIf="challenges.length > 0">
+          <ion-item class="bar-objectif">
+            <img src="" alt="">
+            <p>10 000/jours</p>
+          </ion-item>
+          <button class="btn-defobjectif">Definir Objectif</button>
+          <img class="partager" src="" alt="">
+        </div>
+        <div class="module-objectif" *ngIf="challenges.length > 0">
+          <ion-item class="bar-objectif">
+            <img src="" alt="">
+            <p>10 000/jours</p>
+          </ion-item>
+          <button class="btn-defobjectif">Definir Objectif</button>
+          <img class="partager" src="" alt="">
+        </div> -->
 
-          </div>
-          <button class="btn-defobjectif">Definir Objectif</button>
-          <img class="partager" src="" alt="">
-        </div>
-        <div class="module-objectif">
-          <div class="bar-objectif">
-            <img src="" alt="">
-            <p>10 000/jours</p>
-          </div>
-          <button class="btn-defobjectif">Definir Objectif</button>
-          <img class="partager" src="" alt="">
-        </div>
-        <div class="module-objectif">
-          <div class="bar-objectif">
-            <img src="" alt="">
-            <p>10 000/jours</p>
-          </div>
-          <button class="btn-defobjectif">Definir Objectif</button>
-          <img class="partager" src="" alt="">
-        </div>
-        <div class="addobjectif">
-          <button class="btn-addobjectif">ajouter un Objectif</button>
-        </div>
+      </div>
+      <div class="actionBar" *ngIf="challenges.length < 3">
+        <ion-button>ajouter un Objectif</ion-button>
+        <ion-button (click)="randomObjectif()">Objectif Aleatoire</ion-button>
       </div>
     </ion-card>
     <ion-card class="section-histo">
       <div class="box-histo">
-        <h3>Historique de vos objectif</h3>
+        <h4>Historique de vos objectifs</h4>
         <div class="bar-histo">
           <div class="sousbar-histo">
             <p>Cette semaine</p>

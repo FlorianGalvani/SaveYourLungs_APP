@@ -1,122 +1,123 @@
-ion-content{ 
-    font-family:dongle-light !important;
-    ion-card.vos-objectif{
+ion-content {
+    font-family: dongle-light !important;
+    ion-card.vos-objectif {
         display: flex;
         justify-content: center;
-        margin: 0 auto
+        margin: 0 auto;
     }
-    ion-card.section-histo{
-
+    ion-card.section-histo {
         display: flex;
         justify-content: center;
-        margin: 0 auto
+        margin: 0 auto;
     }
-  }
-.main{
+}
+.main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
 }
-.main>h3{
-    font-family:dongle-regular !important;
+.main > h3 {
+    font-family: dongle-regular !important;
     font-size: 24px;
-    margin-left: 63px;
+    text-align: center;
 }
-.vos-objectif{
-
+.vos-objectif {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.box-objectif{
+.actionBar {
+    display: flex;
+    justify-content: space-around;
+}
+.box-objectif {
     // background-color: #E1E1E1;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 295px;
 }
-.box-objectif h4{
-font-size: 18px;
-width: 280px;
-height: 30px;
-margin-top: 0px;
-margin-bottom: 0px;
-text-align: center;
+.box-objectif h4 {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-.module-objectif{
-
+.module-objectif {
 }
-.bar-objectif{
+.bar-objectif {
     display: flex;
     // background-color: #B5B5B5;
+    background-color: var(--ion-item-background);
     border-radius: 10px;
     justify-content: right;
-    margin-bottom: 5px ;
+    margin-bottom: 5px;
     width: 275px;
     height: 32px;
     align-items: center;
 }
-.bar-objectif p{
+.bar-objectif p {
     font-family: dongle-regular !important;
     font-size: 18px;
 }
-.txt-bar{
+.txt-bar {
     text-align: center;
 }
-.btn-defobjectif{
+.btn-defobjectif {
     margin-bottom: 5px;
     margin-left: 5px;
     border-radius: 8px;
-    background-color: #7480FF;
+    background-color: #7480ff;
     height: 18px;
     width: 106px;
-    
 }
-.module-objectif button{
+.module-objectif button {
     justify-content: center;
-    color: #ffff;
 }
-.btn-addobjectif{
+.btn-addobjectif {
     border-radius: 8px;
-    background-color: #7480FF;
+    background-color: #7480ff;
     height: 18px;
     width: 106px;
-    color: #ffff;
 }
-.addobjectif{
+.addobjectif {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
-// 
-.section-histo{
-
+//
+.section-histo {
 }
-.box-histo{
+.box-histo {
     width: 300px;
     height: auto;
-    background-color: #E1E1E1;
     border-radius: 10px;
     padding: 10px;
 }
 
 .box-histo h3 {
     margin-top: 0px;
-    font-family:dongle-regular !important;
+    font-family: dongle-regular !important;
     margin-bottom: 0px;
 }
-.bar-histo{
-display: flex;
+.bar-histo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
-.bar-histo img{
+.bar-histo img {
     width: 19.5px;
     height: 21.58px;
     margin-top: 3px;
     margin-left: 10px;
 }
-.sousbar-histo{
+.sousbar-histo {
     display: flex;
-    background-color: #B5B5B5;
+    background-color: var(--ion-item-background);
+
     border-radius: 10px;
-    margin-bottom: 10px ;
+
     width: 233px;
     height: 26px;
     justify-content: space-around;
@@ -126,11 +127,11 @@ display: flex;
 .sousbar-histo p {
     font-size: 18px;
 }
-.seemore{
+.seemore {
     display: flex;
     justify-content: center;
 }
-.btn-seemore{
+.btn-seemore {
     border-radius: 8px;
     // background-color: #7480FF;
     width: 71px;

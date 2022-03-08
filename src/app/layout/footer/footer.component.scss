@@ -3,7 +3,22 @@ ion-footer {
         display: flex;
         justify-content: space-around;
         ion-icon {
-            font-size: 32px;
+            font-size: 28px;
+        }
+        .Nav {
+            position: relative;
+        }
+        .activeRoute {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            width: 100%;
+            bottom: 10%;
+            .dot {
+                background-color: #ffffff;
+                width: 2px;
+                height: 2px;
+            }
         }
         .notifications {
             position: relative;
@@ -17,7 +32,7 @@ ion-footer {
                 bottom: 0;
                 right: 1px;
                 border-radius: 100px;
-                color: #f00;
+                color: #eb445a;
                 height: 12px;
                 width: 12px;
             }

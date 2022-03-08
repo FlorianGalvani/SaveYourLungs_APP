@@ -38,6 +38,9 @@ export class AuthService {
     );
   }
   async logout() {
+    console.log('===========================================');
+    console.log('AU REVOIR');
+    console.log('===========================================');
     await this.storage.remove('ACCESS_TOKEN');
     this.authSubject.next(false);
   }

@@ -1,0 +1,13 @@
+<ion-content [fullscreen]="true">
+  <ion-card class="chart-card">
+    <ion-card-header>
+      <ion-card-title>Cette semaine vous avez fumé : 
+        <ion-spinner *ngIf="!totalWeekSteps" name="dots"></ion-spinner>
+      <p *ngIf="totalWeekSteps"> {{totalWeekSteps}} cigarettes</p>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barChart></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

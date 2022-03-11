@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ObjectifPageRoutingModule } from './objectif-routing.module';
 
 import { ObjectifPage } from './objectif.page';
+import { Push, PushObject, PushOptions } from '@awesome-cordova-plugins/push/ngx';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ObjectifPage } from './objectif.page';
     IonicModule,
     ObjectifPageRoutingModule
   ],
-  declarations: [ObjectifPage]
+  declarations: [ObjectifPage],
+  providers: [Push]
 })
 export class ObjectifPageModule {}

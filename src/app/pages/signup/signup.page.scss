@@ -1,30 +1,48 @@
 .container {
+    height: 100%;
+
+    padding: 4% 2%;
+    color: var(--ion-text-color);
+    font-family: "Dongle", sans-serif;
+    font-size: 1.5em;
+    line-height: 12px;
+    .container-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        ion-icon{
+            position: absolute;
+            top: 0;
+            width: 10%;
+        }
+        h2{
+            width: 100%;
+        }
+    }
+    h2 {
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+    }
     .back {
         position: absolute;
         top: 20px;
         left: 20px;
         font-size: 24px;
     }
-    background-color: #00324b;
-    color: #fff;
-    font-family: "Dongle", sans-serif;
-    font-size: 1.5em;
-    line-height: 12px;
-    padding-bottom: 20px;
-    h2 {
-        padding-top: 20px;
-        font-size: 30px;
-        text-align: center;
-    }
     form {
-        background-color: #063953;
+        background-color: var(--ion-item-background);
         width: 90%;
         margin: auto;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        .one-input {
-            margin: auto;
-            margin-left: 30px;
+        padding: 0 4% 6% 4%;
+        ion-item +ion-item {
+            margin-bottom: 2%;
+
+         }
+        ion-item {
+            line-height: 45px;
             input {
                 background-color: #002537;
                 border-radius: 5px;
@@ -37,7 +55,7 @@
                 }
             }
         }
-        button {
+        ion-button {
             width: 60%;
             display: block;
             border-radius: 10px;
@@ -45,7 +63,7 @@
             margin-top: 40px;
             text-align: center;
             font-size: 1.1em;
-            padding: 5px 0 5px 0;
+            margin-top: 10%;
             background-color: #00324b;
             color: #fff;
         }

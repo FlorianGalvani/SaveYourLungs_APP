@@ -22,10 +22,10 @@ export class HomePage implements OnInit {
   todaySteps: number = null;
   weekSteps: Array<number> = [0,0,0,0,0,0,0];
   totalWeekSteps: number = null;
+  dayOfTheWeek =  new Date().getDay();
   constructor(private health: Health, private storage: Storage, private router: Router) {
 
   }
-
 
   ngOnInit(): void {
     const start = new Date();
@@ -33,8 +33,8 @@ export class HomePage implements OnInit {
     const end = new Date();
     end.setHours(23, 59, 59, 999);
     this.health.query({
-      startDate: start, // three days ago
-      endDate: end, // now
+      startDate: start,
+      endDate: end,
       dataType: 'steps',
       limit: 1000,
 
@@ -93,12 +93,28 @@ export class HomePage implements OnInit {
     this.bars = new Chart(this.barChart.nativeElement, {
       type: 'bar',
       data: {
-        labels: ['D', 'L', 'M', 'M', 'J', 'V', 'D'],
+        labels: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
         datasets: [{
           label: 'Pas',
           data: this.weekSteps,
-          backgroundColor: 'rgb(38, 194, 129)', // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
+          backgroundColor: [
+            this.dayOfTheWeek === 0 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 1 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 2 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 3 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 4 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 5 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 6 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+          ], // array should have same number of elements as number of dataset
+          borderColor: [
+            this.dayOfTheWeek === 0 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 1 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 2 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 3 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 4 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 5 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+            this.dayOfTheWeek === 6 ? 'rgb(255,0,0)' : 'rgb(38, 194, 129)',
+          ],// array should have same number of elements as number of dataset
           borderWidth: 1
         }]
       },

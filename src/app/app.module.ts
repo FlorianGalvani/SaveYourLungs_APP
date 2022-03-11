@@ -19,6 +19,8 @@ import { NgChartsModule } from 'ng2-charts';
 
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { Push, PushObject, PushOptions } from '@awesome-cordova-plugins/push/ngx';
+
 const declarations = [AppComponent];
 
 @NgModule({
@@ -35,7 +37,7 @@ const declarations = [AppComponent];
     IonicStorageModule.forRoot(),
     NgChartsModule
   ],
-  providers: [NativeAudio,Health,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [Push,NativeAudio,Health,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

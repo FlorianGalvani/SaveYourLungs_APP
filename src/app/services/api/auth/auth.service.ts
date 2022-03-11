@@ -17,9 +17,9 @@ export class AuthService {
   constructor(private  httpClient:  HttpClient, private  storage:  Storage) { }
 
   register(user: User): Observable<AuthResponse> {
-    return this.httpClient.post<AuthResponse>(this.apiAuthUrl + '/user/signup',user).pipe(
-      tap(async (res: AuthResponse) => {
-
+    return this.httpClient.post<AuthResponse>(this.apiAuthUrl + 'user/signup',user).pipe(
+      tap(async (res:AuthResponse) => {
+        console.log(res);
         if (res.token) {
           await this.storage.set('ACCESS_TOKEN', res.token);
           this.authSubject.next(true);
@@ -38,9 +38,6 @@ export class AuthService {
     );
   }
   async logout() {
-    console.log('===========================================');
-    console.log('AU REVOIR');
-    console.log('===========================================');
     await this.storage.remove('ACCESS_TOKEN');
     this.authSubject.next(false);
   }

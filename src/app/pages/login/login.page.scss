@@ -1,4 +1,11 @@
 .container {
+    height: 100%;
+
+    padding: 4% 2%;
+    color: var(--ion-text-color);
+    font-family: "Dongle", sans-serif;
+    font-size: 1.5em;
+    line-height: 12px;
     .back {
         position: absolute;
         top: 20px;
@@ -11,19 +18,26 @@
         text-align: center;
     }
     form {
+        background-color: var(--ion-item-background);
         width: 90%;
         margin: auto;
+        padding: 6% 4% 6% 4%;
+        .errors {
+            background-color: #f00 !important;
+            padding: 1% 0;
+            text-align: center;
+            p{
+
+            }
+        }
         ion-item {
-            margin-bottom: 10%;
+            line-height: 45px;
             ion-label {
                 font-size: 1.5em;
-                padding: 2% 0;
-                margin-bottom: 5%;
             }
             ion-input {
                 display: block;
                 width: 90%;
-                margin-bottom: 10%;
                 .native-input {
                     margin: auto;
                     background-color: #fff;

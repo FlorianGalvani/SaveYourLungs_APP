@@ -3,43 +3,44 @@
     <ion-card class="vos-objectif">
 
       <div class="box-objectif" >
-        <h4>Vos objectifs</h4>
-        <div class="empty" *ngIf="challenges.length === 0">
-          <p>Vous n'avez aucun challenges en cours</p>
+        <h4>Vos challenges actifs :</h4>
+        <div class="loading" *ngIf="isLoadingChallenges">
+          <ion-spinner type="dots"></ion-spinner>
         </div>
-
-        <div class="module-objectif" *ngFor="let challenge of challenges">
-          <ion-item class="bar-objectif">
-            <img src="" alt="">
-            <div class="txt-bar">
-              <p>10 000/jours</p>
+        <div *ngIf="!isLoadingChallenges">
+          <div class="empty" *ngIf="challenges.length === 0">
+            <p>Vous n'avez aucun challenges en cours</p>
+          </div>
+  
+          <div class="module-objectif" *ngFor="let challenge of challenges">
+            <div class="bar-objectif">
+              <div class="bar-progress" [style.backgroundColor]="todaySteps >= challenge.goal ? '#0f0' : todaySteps >= (challenge.goal / 2) ? '#f90' : '#D73E3E'" [style.width]="(todaySteps*100/challenge.goal) + '%'"></div>
+              <div class="txt-bar">
+                <ion-icon *ngIf="challenge.type === 'step'" name="footsteps-outline"></ion-icon>
+                <ion-icon *ngIf="challenge.type === 'cigarettes'" name="footsteps-outline"></ion-icon>
+                <p>{{challenge.goal}}/jours</p>
+              </div>
             </div>
-          </ion-item>
-          <button class="btn-defobjectif">Definir Objectif</button>
-          <img class="partager" src="" alt="">
+            <!-- <button class="btn-defobjectif">Definir Objectif</button> -->
+            <ion-icon name="share-social-outline"></ion-icon>
+            <ion-icon name="close-outline" (click)="surrendObjectif(challenge.id)" *ngIf="todaySteps !== challenge.goal">
+  
+            </ion-icon>
+            <ion-icon name="close-outline" (click)="surrendObjectif(challenge.id)" *ngIf="todaySteps === challenge.goal">
+  
+            </ion-icon>
+  
+          </div>
         </div>
-        <!-- <div class="module-objectif" *ngIf="challenges.length > 0">
-          <ion-item class="bar-objectif">
-            <img src="" alt="">
-            <p>10 000/jours</p>
-          </ion-item>
-          <button class="btn-defobjectif">Definir Objectif</button>
-          <img class="partager" src="" alt="">
-        </div>
-        <div class="module-objectif" *ngIf="challenges.length > 0">
-          <ion-item class="bar-objectif">
-            <img src="" alt="">
-            <p>10 000/jours</p>
-          </ion-item>
-          <button class="btn-defobjectif">Definir Objectif</button>
-          <img class="partager" src="" alt="">
-        </div> -->
+       
 
       </div>
-      <div class="actionBar" *ngIf="challenges.length < 3">
+
+      <div class="actionBar" *ngIf="challenges.length < 3 && !isLoadingChallenges">
         <ion-button>ajouter un Objectif</ion-button>
         <ion-button (click)="randomObjectif()">Objectif Aleatoire</ion-button>
       </div>
+
     </ion-card>
     <ion-card class="section-histo">
       <div class="box-histo">

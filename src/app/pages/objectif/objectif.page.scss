@@ -27,6 +27,7 @@ ion-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 85%;
 }
 .actionBar {
     display: flex;
@@ -37,6 +38,13 @@ ion-content {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    .loading {
+        padding: 5% 0;
+        text-align: center;
+
+        ion-spinner {
+        }
+    }
 }
 .box-objectif h4 {
     font-size: 2em;
@@ -44,6 +52,12 @@ ion-content {
     margin-bottom: 0px;
 }
 .module-objectif {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ion-icon {
+        font-size: 30px;
+    }
 }
 .bar-objectif {
     display: flex;
@@ -52,16 +66,41 @@ ion-content {
     border-radius: 10px;
     justify-content: right;
     margin-bottom: 5px;
-    width: 275px;
-    height: 32px;
+    width: 90%;
+    height: 2%;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    .item-native {
+        padding: 0;
+        padding-inline-start: none !important;
+        padding-inline-end: none !important;
+    }
+    .bar-progress {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background-color: brown;
+        z-index: 1;
+    }
 }
+
 .bar-objectif p {
     font-family: dongle-regular !important;
     font-size: 18px;
 }
 .txt-bar {
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 0 6%;
+    ion-icon {
+        font-size: 200%;
+        color: var(--ion-text-color);
+    }
 }
 .btn-defobjectif {
     margin-bottom: 5px;

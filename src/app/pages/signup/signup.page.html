@@ -1,38 +1,60 @@
-
 <ion-content>
   <div class="container">
-    <ion-icon class="back"  name="arrow-back-outline" [routerLink]="['/landing-page']"></ion-icon>
-    <h2>S'inscrire</h2>
-    <form>
-      <div class="one-input">
-        <label for="nom">Nom : </label>
-        <input type="text" name="nom" id="nom" placeholder="">
-      </div>
-      <div class="one-input">
-        <label for="prenom">Prenom : </label>
-        <input type="text" name="prenom" id="prenom" placeholder="">
-      </div>
-      <div class="one-input">
-        <label for="age">Age : </label>
-        <input type="number" name="age" id="age" placeholder="">
-      </div>
-      <div class="one-input">
-        <label for="genre">Genre : </label>
-        <input type="text" name="genre" id="genre" placeholder="">
-      </div>
-      <div class="one-input">
-        <label for="email">Email : </label>
-        <input type="email" name="email" id="email" placeholder="">
-      </div>
-      <div class="one-input">
-        <label for="password">Mot de passe : </label>
-        <input type="password" name="password" id="password" placeholder="">
-      </div>
-      <div class="one-input">
-        <label for="confirm-password">Confirmation mot de passe : </label>
-        <input type="password" name="confirm-password" id="confirm-password" placeholder="">
-      </div>
-        <button type="submit">Inscription</button>
+    <div class="container-header">
+      <ion-icon class="back" name="arrow-back-outline" [routerLink]="['/landing-page']"></ion-icon>
+      <h2>S'inscrire</h2>
+    </div>
+    <form [formGroup]="signupForm" (ngSubmit)="submitForm()">
+
+      <ion-item>
+        <ion-label for="nom">Nom : </ion-label>
+        <ion-input formControlName="lastname" type="text" name="nom" id="nom" placeholder=""></ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.lastname.errors?.required">
+        Veuillez renseigner le champs Nom.
+      </span>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.lastname.errors?.minlength">
+        Ce champ doit contenir 2 caracteres minimum.
+      </span>
+      <ion-item >
+        <ion-label for="prenom">Prenom : </ion-label>
+        <ion-input type="text" formControlName="firstname" name="prenom" id="prenom" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label for="age">Age : </ion-label>
+        <ion-input type="number" formControlName="age" name="age" id="age" placeholder=""></ion-input>
+
+      </ion-item>
+      <ion-item >
+        <ion-label for="gender">Gender : </ion-label>
+        <ion-select formControlName="gender" placeholder="Select One">
+          <ion-select-option value="woman">Femme</ion-select-option>
+          <ion-select-option value="man">Homme</ion-select-option>
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item >
+        <ion-label for="email">Email : </ion-label>
+        <ion-input type="email" formControlName="email" name="email" id="email" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label for="password">Mot de passe : </ion-label>
+        <ion-input type="password" formControlName="password" name="password" id="password" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label for="confirm-password">Confirmation: </ion-label>
+        <ion-input type="password" formControlName="confirmation" name="confirm-password" id="confirm-password"
+          placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" color="danger" expand="block">
+        <p *ngIf="!isLoading">Inscription</p>
+        <ion-spinner *ngIf="isLoading" name="dots"></ion-spinner>
+      </ion-button>
     </form>
   </div>
 
